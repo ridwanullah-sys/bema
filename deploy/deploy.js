@@ -15,6 +15,13 @@ module.exports = async function ({ deployments }) {
         waitConfirmations: network.config.blockConfirmations || 1,
     })
 
+    const BemaCoin = await deploy("BemaCoin", {
+        from: deployer,
+        args: [],
+        log: true,
+        waitConfirmations: network.config.blockConfirmations || 1,
+    })
+
     // const BemaChain = await deploy("BemaChain", {
     //     from: deployer,
     //     args: args,
